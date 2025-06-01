@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "./tailwind.theme.css";
+@import "./tailwind.utilities.css";
+
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background-color: var(--color-gray-50);
+    color: var(--color-gray-800);
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+  }
+}
+
+@layer components {
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--color-gray-700);
+    border-radius: 0.5rem;
+    transition-property: color, background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    font-weight: 500;
+  }
+  
+  .sidebar-item:hover {
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-700);
+  }
+  
+  .sidebar-item.active {
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-700);
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    padding: 1.25rem;
+    border-width: 1px;
+    border-color: var(--color-gray-100);
+  }
+  
+  .btn-primary {
+    background-color: var(--color-primary-600);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-primary-700);
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-gray-100);
+    color: var(--color-gray-800);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-gray-200);
+  }
+}
