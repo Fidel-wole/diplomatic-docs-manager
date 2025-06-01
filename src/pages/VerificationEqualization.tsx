@@ -117,18 +117,6 @@ const sampleVerifications = [
   }
 ];
 
-// Document types for verification/equalization
-const documentTypes = [
-  { type: 'University Degree', count: 2 },
-  { type: 'Professional Certification', count: 1 },
-  { type: 'Engineering Degree', count: 1 },
-  { type: 'Medical Degree', count: 1 },
-  { type: 'Law Degree', count: 1 },
-  { type: 'University Diploma', count: 1 },
-  { type: 'Bachelor in Business', count: 1 },
-  { type: 'PhD Certificate', count: 1 },
-  { type: 'Master of Science', count: 1 }
-];
 
 const VerificationEqualization = () => {
   const [searchTerm, setSearchTerm] = useState('');
